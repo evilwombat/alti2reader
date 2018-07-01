@@ -1,0 +1,13 @@
+Name=Alti-2 Reader
+Version=1.0
+Exec=alti2reader %U
+Comment=Program to read save and print Altimaster N-series devices jump's information.
+Icon=x-application-alti2reader
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=alti2reader;Application;GTK;GNOME;Utility;
+GenericName=Alti2Reader
+MimeType=application/alti2reader;
+OnlyShowIn=GNOME;

@@ -43,12 +43,12 @@ namespace Alti2Reader
             dlg.FileName = Application.ProductName + " " + sslJump.Text + ".csv";
             dlg.Title = "Choose file to store " + sslJump.Text + " in ASCII";
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK) SaveASCII(dlg.FileName);
-            dlg.DefaultExt = ".emf";
-            dlg.Filter = "Enhanced metafiles (*.emf)|*.emf|All files (*.*)|*.*";
-            dlg.FileName = Application.ProductName + " " + sslJump.Text + ".emf";
+            dlg.DefaultExt = ".jpg";
+            dlg.Filter = "Graphics file (*.jpg)|*.jpg|All files (*.*)|*.*";
+            dlg.FileName = Application.ProductName + " " + sslJump.Text + ".jpg";
             dlg.Title = "Choose file to store " + sslJump.Text + " graph";
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                crtProfile.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Emf);
+                crtProfile.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Jpeg);
 
         }
         private bool SaveASCII(string fname)

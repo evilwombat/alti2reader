@@ -49,7 +49,7 @@ namespace Alti2Reader.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("COM1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/dev/ttyUSB0")]
         public string COMPortName {
             get {
                 return ((string)(this["COMPortName"]));
@@ -122,12 +122,12 @@ namespace Alti2Reader.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShowDataExchange {
+        public bool ShowDataExch {
             get {
-                return ((bool)(this["ShowDataExchange"]));
+                return ((bool)(this["ShowDataExch"]));
             }
             set {
-                this["ShowDataExchange"] = value;
+                this["ShowDataExch"] = value;
             }
         }
         

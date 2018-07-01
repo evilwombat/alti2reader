@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using USBComms;
 using IrDAComms;
-using FTChipID;
+// using FTChipID;
 
 
 namespace Alti2Reader
@@ -53,12 +53,11 @@ namespace Alti2Reader
             }
             private struct structDetected
             {
-                public string SN;
                 public string Name;
                 public string Desc;
                 public int ProductType;
             }
-            private structDetected[] DetectedDevices;
+            private List<structDetected> DetectedDevices;
             public struct structStatus {
                 public bool isConnected;
                 public bool isIrDA;
@@ -673,56 +672,76 @@ namespace Alti2Reader
 */
             private int DetectDevice()
             {
+				System.Diagnostics.Process ps = new System.Diagnostics.Process();
                 try
                 {
-                    int n = 0;
-                    FTChipID.ChipID.GetNumDevices(ref n);
+                    DetectedDevices = new List<structDetected> {};
+					structDetected dd;
+					System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("lsusb", "-d 1bc9:6001");
+					psi.UseShellExecute = false;	
+					psi.WorkingDirectory = "/";
+					psi.CreateNoWindow = true;
+					psi.RedirectStandardOutput = true;
+					ps.StartInfo = psi;
+					ps.Start();
+					string ss = ps.StandardOutput.ReadToEnd();
+					if (ss != "") 
+					{
+						ps.Close();
+						dd = new structDetected();
+						dd.Desc = "Altimaster N3";
+						dd.ProductType = 0;
+						psi = new System.Diagnostics.ProcessStartInfo("bash", "-c 'readlink -f /dev/serial/by-id/usb-Alti-2_Altimaster_N3_*'");
+						psi.UseShellExecute = false;	
+						psi.WorkingDirectory = "/";
+						psi.CreateNoWindow = true;
+						psi.RedirectStandardOutput = true;
+						ps = new System.Diagnostics.Process();
+						ps.StartInfo = psi;
+						ps.Start();
+						dd.Name = Trim(ps.StandardOutput.ReadToEnd());
+						DetectedDevices.Add(dd);
+						ps.Close();
+						psi = new System.Diagnostics.ProcessStartInfo("lsusb", "-d 1bc9:6002");
+						psi.UseShellExecute = false;	
+						psi.WorkingDirectory = "/";
+						psi.CreateNoWindow = true;
+						psi.RedirectStandardOutput = true;
+						ps.StartInfo = psi;
+						ps.Start();
+						ss = ps.StandardOutput.ReadToEnd();
+						ps.Close();
+						if (ss != "") {
+							dd = new structDetected();
+							dd.Desc = "Altimaster N3 Audio";
+							dd.ProductType = 1;
+							psi = new System.Diagnostics.ProcessStartInfo("bash", "-c 'readlink -f /dev/serial/by-id/usb-Alti-2_Altimaster_N3A_*'");
+							psi.UseShellExecute = false;	
+							psi.WorkingDirectory = "/";
+							psi.CreateNoWindow = true;
+							psi.RedirectStandardOutput = true;
+							ps = new System.Diagnostics.Process();
+							ps.StartInfo = psi;
+							ps.Start();
+							dd.Name = Trim(ps.StandardOutput.ReadToEnd());
+							DetectedDevices.Add(dd);
+							ps.Close();
+						}
+					}
                     List<string> ls = new List<string>{};
                     ls.AddRange(CommIrDA.GetAllDeviceIDs());
                     string name = ls.Find(delegate(string s) { return s.Trim() == "Neptune"; });
                     if (name != null)
                     {
-                        DetectedDevices = new structDetected[n + 1];
-                        DetectedDevices[n].ProductType = 2;
-                        DetectedDevices[n].Name = "IrDA";
-                        DetectedDevices[n].Desc = "Neptune";
+                        dd = new structDetected();
+                        dd.ProductType = 2;
+                        dd.Name = "IrDA";
+                        dd.Desc = "Neptune";
+						DetectedDevices.Add(dd);
                     }
-                    else if (n == 0) { Status.isDetected = false; return 0; }
-                         else { DetectedDevices = new structDetected[n]; }
-                    string regkeyname = "SYSTEM\\CurrentControlSet\\Enum\\FTDIBUS\\";
-                    for (int i = 0; i < n; i++)
-                    {
-                        DetectedDevices[i].SN = new string(new char[20]);
-                        DetectedDevices[i].Desc = new string(new char[50]);
-                        FTChipID.ChipID.GetDeviceSerialNumber(i, ref DetectedDevices[i].SN, DetectedDevices[i].SN.Length);
-                        FTChipID.ChipID.GetDeviceDescription(i, ref DetectedDevices[i].Desc, DetectedDevices[i].Desc.Length);
-                        switch (DetectedDevices[i].Desc)
-                        {
-                            case "Altimaster N3":
-                                DetectedDevices[i].ProductType = 0;
-                                regkeyname += "VID_1BC9+PID_6001+" + DetectedDevices[i].SN.Trim() + "A" + "\\0000\\Device Parameters";
-                                break;
-                            case "Altimaster N3 Audio":
-                                DetectedDevices[i].ProductType = 1;
-                                regkeyname += "VID_1BC9+PID_6002+" + DetectedDevices[i].SN.Trim() + "A" + "\\0000\\Device Parameters";
-                                break;
-                            default:
-                                DetectedDevices[i].ProductType = 4;
-                                break;
-                        }
-                        if (DetectedDevices[i].ProductType < 2)
-                        {
-                            RegistryKey regkey = Registry.LocalMachine.OpenSubKey(regkeyname);
-                            if (regkey == null) 
-                                throw (new Exception("Device detection: " + "Registry key " + regkeyname + " not found in registry"));
-                            DetectedDevices[i].Name = (string)regkey.GetValue("PortName");
-                            if (DetectedDevices[i].Name == null) 
-                                throw (new Exception("Device detection: " + "Port name of " + DetectedDevices[i].Desc + " not found in registry"));
-                        }
-                    }
+                    else if (DetectedDevices.Count == 0) { Status.isDetected = false; return 0; }
                     Status.isDetected = true;
-                    n = DetectedDevices.Length;
-                    if (n == 1)
+                    if (DetectedDevices.Count == 1)
                     {
                         Properties.Settings.Default.COMPortName = DetectedDevices[0].Name;
                         Status.isMany = false;
@@ -735,24 +754,14 @@ namespace Alti2Reader
                         }
                     }
                     else Status.isMany = true;
-                    return n;
+                    return DetectedDevices.Count;
                 }
-                catch (FTChipID.ChipIDException err)
-                { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
-                catch (System.ObjectDisposedException err)
-                { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
-                catch (System.Security.SecurityException err)
-                { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
-                catch (System.UnauthorizedAccessException err)
-                { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
-                catch (System.IO.IOException err)
-                { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
                 catch (Exception err)
                 { ShowError("Device detection: " + err.Message); Status.isDetected = false; Status.isIrDA = false; Status.isN3A = false; return 0; }
             }
             public void FillCommPortList(ListView lst)
             {
-                int n = (connected() ? DetectedDevices.Length : DetectDevice());
+                int n = (connected() ? DetectedDevices.Count : DetectDevice());
                 if (n > 0)
                 {
                     for (int i = 0; i < n; i++) lst.Items.Add(new ListViewItem(new string[] { 
@@ -921,13 +930,13 @@ namespace Alti2Reader
                                 break;
                             case 2:
                                 ProductName = "Wave";
-                                goto unsupported;
+                                throw (new Exception("Usupported product " + ProductName));
                             case 3:
                                 ProductName = "Tracker";
-                                goto unsupported;
+                                throw (new Exception("Usupported product " + ProductName));
                             case 4:
                                 ProductName = "DataLogger";
-                                goto unsupported;
+                                throw (new Exception("Usupported product " + ProductName));
                             case 5:
                                 ProductName = "N3";
                                 break;
@@ -936,7 +945,6 @@ namespace Alti2Reader
                                 break;
                             default:
                                 ProductName = "Unknown";
-                            unsupported:
                                 throw (new Exception("Usupported product " + ProductName));
                         }
                         NVRAMConfig = OriginalRecord[16];
@@ -1350,23 +1358,23 @@ namespace Alti2Reader
                     Parent.Headers.Header[clsHeaders.HEADERS_DATE].Value = new DateTime(Year, Month, Day).ToShortDateString();
                     Parent.Headers.Header[clsHeaders.HEADERS_TIME].Value = new DateTime(Year, Month, Day, Hour, Minutes, 0).ToShortTimeString();
                     Parent.Headers.Header[clsHeaders.HEADERS_EXIT].Value = ((double)AltExit * (double)((Properties.Settings.Default.Altitude == 0 ? 
-                        ((clsDevSettings)(Parent.DependOn[1])).Altitude : (Properties.Settings.Default.Altitude == 1)) ? 16.0 : 52.4934)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Altitude : (Properties.Settings.Default.Altitude == 1)) ? 16.0 : 52.4934)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_DEPLOY].Value = ((double)AltDeploy * (double)((Properties.Settings.Default.Altitude == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Altitude : (Properties.Settings.Default.Altitude == 1)) ? 16.0 : 52.4934)).ToString(".");
-                    //                   Headers.Header[clsHeaders.HEADERS_DZALT].Value = ((double)Jumps[jump].DZAlt * (double)(meter ? 16.0 : 52.4934)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Altitude : (Properties.Settings.Default.Altitude == 1)) ? 16.0 : 52.4934)).ToString("0.");
+                    //                   Headers.Header[clsHeaders.HEADERS_DZALT].Value = ((double)Jumps[jump].DZAlt * (double)(meter ? 16.0 : 52.4934)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_DZALT].Value = DZAlt.ToString();
                     Parent.Headers.Header[clsHeaders.HEADERS_FFTIME].Value = FFTimeSec.ToString();
                     Parent.Headers.Header[clsHeaders.HEADERS_CPTIME].Value = CPTimeSec.ToString();
                     Parent.Headers.Header[clsHeaders.HEADERS_MAXSPD].Value = ((double)MaxSpeed * (double)((Properties.Settings.Default.Speed == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_12KFT].Value = ((double)V12000ft * (double)((Properties.Settings.Default.Speed == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_9KFT].Value = ((double)V9000ft * (double)((Properties.Settings.Default.Speed == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_6KFT].Value = ((double)V6000ft * (double)((Properties.Settings.Default.Speed == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_3KFT].Value = ((double)V3000ft * (double)((Properties.Settings.Default.Speed == 0 ?
-                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString(".");
+                        ((clsDevSettings)(Parent.DependOn[1])).Speed : (Properties.Settings.Default.Speed == 1)) ? 3.6 : 2.236936)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_SPGR].Value = SpeedGroupNumber == 0 ? "default" : "Group " + SpeedGroupNumber.ToString();
                     Parent.Headers.Header[clsHeaders.HEADERS_DZ].Value = Properties.Settings.Default.Resolve ?
                         ((clsNames)(Parent.DependOn[3])).Names[DZnameIndex].Name.Trim() : DZnameIndex.ToString();
@@ -1887,9 +1895,9 @@ namespace Alti2Reader
                 int i; int n = alts.Length;
                 for (i = 0; i <= n; i++)
                 {
-                    srs = new System.Windows.Forms.DataVisualization.Charting.Series((i == 0) ? "<"+alts[i].ToString(".") + m : 
+                    srs = new System.Windows.Forms.DataVisualization.Charting.Series((i == 0) ? "<"+alts[i].ToString("0.") + m : 
                                                                                                 i == n ? ">"+alts[n-1].ToString(".") + m :
-                                                                                                alts[i-1].ToString(".") + m + "-" + alts[i].ToString(".") + m);
+                                                                                                alts[i-1].ToString("0.") + m + "-" + alts[i].ToString("0.") + m);
                     srs.ChartArea = "craStat";
                     srs.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
                     srs.Legend = "lgnStat";
@@ -1968,7 +1976,7 @@ namespace Alti2Reader
                 public List<ListViewItem> ToProfileScreen(double alt, string m) 
                 {
                     List<ListViewItem> lsv = new List<ListViewItem> { };
-                    lsv.Add(new ListViewItem(new string[] { (InitalAltitude*alt).ToString(".")+m, "0"}, 0));
+                    lsv.Add(new ListViewItem(new string[] { (InitalAltitude*alt).ToString("0.")+m, "0"}, 0));
                     int img = 0;
                     for (int i = 0; i < 108; i++)
                     {
@@ -1980,7 +1988,7 @@ namespace Alti2Reader
                             case LT_ONPLANE: img = 0; break;
                             default:
                                 lsv.Add(new ListViewItem(new string[] { 
-                                              (Points[i].Altitude * alt).ToString(".")+m,
+                                              (Points[i].Altitude * alt).ToString("0.")+m,
                                               Points[i].Seconds.ToString(".00")}, img));
                                 break;
                         }
@@ -2173,7 +2181,7 @@ namespace Alti2Reader
         {
             System.IO.FileStream fs = null;
             bool ret = false;
-            byte[] b = new byte[32];
+//            byte[] b = new byte[32];
             try
             {
                 clsComm.ShowStatus("Save to binary archive", null, -1);

@@ -42,7 +42,7 @@
             // 
             // tableLayoutPanel
             // 
-            this.tableLayoutPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+//            this.tableLayoutPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
             this.tableLayoutPanel.Controls.Add(this.logoPictureBox, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.labelProductName, 1, 0);

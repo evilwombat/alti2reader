@@ -372,10 +372,10 @@
             this.cmbBaudRate.ValueMember = "57600";
             this.cmbBaudRate.DisplayMember = "57600";
             this.cmbBaudRate.Text = "57600";
+            this.hlpSettings.SetShowHelp(this.cmbBaudRate, ((bool)(resources.GetObject("cmbBaudRate.ShowHelp"))));
             this.hlpSettings.SetHelpKeyword(this.cmbBaudRate, resources.GetString("cmbBaudRate.HelpKeyword"));
             this.hlpSettings.SetHelpNavigator(this.cmbBaudRate, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("cmbBaudRate.HelpNavigator"))));
             this.hlpSettings.SetHelpString(this.cmbBaudRate, resources.GetString("cmbBaudRate.HelpString"));
-            this.hlpSettings.SetShowHelp(this.cmbBaudRate, ((bool)(resources.GetObject("cmbBaudRate.ShowHelp"))));
             // 
             // lblBaudRate
             // 

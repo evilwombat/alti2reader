@@ -1,30 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alti2Reader", "Alti2Reader\Alti2Reader.csproj", "{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alti2Reader", "Alti2Reader\Alti2Reader.csproj", "{6A24484A-A307-49D5-8F79-AA60515038EF}"
+EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Packages", "Packages.mdproj", "{2A9A3310-0D39-4379-8F22-7091446312AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
-		Release|Any CPU = Release|Any CPU
-		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Debug|x86.ActiveCfg = Debug|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Debug|x86.Build.0 = Debug|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Release|Any CPU.ActiveCfg = Release|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Release|Mixed Platforms.Build.0 = Release|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Release|x86.ActiveCfg = Release|x86
-		{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}.Release|x86.Build.0 = Release|x86
+		{2A9A3310-0D39-4379-8F22-7091446312AD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2A9A3310-0D39-4379-8F22-7091446312AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A24484A-A307-49D5-8F79-AA60515038EF}.Debug|x86.ActiveCfg = Debug|x86
+		{6A24484A-A307-49D5-8F79-AA60515038EF}.Debug|x86.Build.0 = Debug|x86
+		{6A24484A-A307-49D5-8F79-AA60515038EF}.Release|x86.ActiveCfg = Release|x86
+		{6A24484A-A307-49D5-8F79-AA60515038EF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Alti2Reader\Alti2Reader.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileName
+		description = @Program to read save and print Altimaster N-series\ndevices logbook jump's details and profiles, build \nsave and print jump's profiles and statistics graphs.
+		version = 1.2.0.0
 	EndGlobalSection
 EndGlobal

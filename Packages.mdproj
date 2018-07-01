@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>PackagingProject</ItemType>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A9A3310-0D39-4379-8F22-7091446312AD}</ProjectGuid>
+    <Packages>
+      <Packages>
+        <Package name="Alti2Reader">
+          <Builder targetFile="Alti2Reader-linux.tar.gz" platform="Linux" configuration="Release|x86" ctype="BinariesZipPackageBuilder">
+            <ChildEntries>
+              <SolutionItemReference path="Alti2Reader\Alti2Reader.csproj" />
+            </ChildEntries>
+            <RootEntry path="Alti2Reader.sln" id=":root:" />
+          </Builder>
+        </Package>
+      </Packages>
+    </Packages>
+    <ReleaseVersion>1.2.0.0</ReleaseVersion>
+  </PropertyGroup>
+</Project>

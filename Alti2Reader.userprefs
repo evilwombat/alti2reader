@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Alti2Reader/clsNeptune.cs">
+    <Files>
+      <File FileName="Alti2Reader/frmAbout.cs" Line="11" Column="30" />
+      <File FileName="Alti2Reader/frmCal.cs" Line="12" Column="35" />
+      <File FileName="Alti2Reader/clsNeptune.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="Alexey Lobanov" Email="aklobanov@gmail.com" Copyright="(c) 2011 Alexey Lobanov" Company="Lobanov'Software" Trademark="Alti-2 Reader" />
+</Properties>

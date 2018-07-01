@@ -1,0 +1,21 @@
+E: alti2reader: control-file-has-bad-permissions postinst 0775 != 0755
+E: alti2reader: control-file-has-bad-permissions prerm 0775 != 0755
+W: alti2reader: extended-description-line-too-long
+W: alti2reader: non-standard-dir-perm usr/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/bin/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/alti2reader/ 0775 != 0755
+W: alti2reader: non-standard-file-perm usr/share/alti2reader/Alti-2 Reader.exe.config 0664 != 0644
+W: alti2reader: non-standard-dir-perm usr/share/applications/ 0775 != 0755
+W: alti2reader: non-standard-file-perm usr/share/applications/Alti-2_Reader.desktop 0664 != 0644
+W: alti2reader: non-standard-dir-perm usr/share/doc/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/doc/alti2reader/ 0775 != 0755
+W: alti2reader: non-standard-file-perm usr/share/doc/alti2reader/changelog.gz 0664 != 0644
+W: alti2reader: non-standard-file-perm usr/share/doc/alti2reader/copyright 0664 != 0644
+W: alti2reader: non-standard-dir-perm usr/share/icons/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/icons/hicolor/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/icons/hicolor/scalable/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/mime/ 0775 != 0755
+W: alti2reader: non-standard-dir-perm usr/share/mime/packages/ 0775 != 0755
+W: alti2reader: binary-without-manpage usr/bin/alti2reader
+W: alti2reader: desktop-entry-invalid-category alti2reader usr/share/applications/Alti-2_Reader.desktop

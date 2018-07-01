@@ -1,0 +1,107 @@
+[DEBREATE-0.7.2]
+<<CTRL>>
+Package: alti2reader
+Version: 1.2.0.0
+Section: utils
+Maintainer: Alexey Lobanov <aklobanov@gmail.com>
+Homepage: http://sites.google.com/site/lobanovsoftware
+Priority: optional
+Architecture: all
+Depends: alti2-n3-dkms (>=0.7), mono-runtime (>=2.10.5-1)
+Description: Altimaster N-series devices logbook reader
+ Alti-2 Reader is for skydivers who use Altimaster N-series devices to keep there jump's logbook. This program can read save and print jump's logbook, build save and print jump's profiles and statistics graphs.
+
+<</CTRL>>
+<<FILES>>
+1
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/Alti2Reader.ico -> Alti2Reader.ico -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/alti2reader.xml -> alti2reader.xml -> /usr/share/mime/packages
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/alti2reader.svg -> alti2reader.svg -> /usr/share/icons/hicolor/scalable
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/Alti-2 Reader.exe.config -> Alti-2 Reader.exe.config -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/Alti2Reader.exe* -> Alti2Reader.exe -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/USB.dll -> USB.dll -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/System.Windows.Forms.DataVisualization.dll -> System.Windows.Forms.DataVisualization.dll -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/IrDAComms.dll -> IrDAComms.dll -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/InTheHand.Net.Personal.dll -> InTheHand.Net.Personal.dll -> /usr/share/alti2reader
+/home/user/Projects/Alti2Reader/Alti2Reader-linux/alti2reader* -> alti2reader -> /usr/bin
+<</FILES>>
+<<SCRIPTS>>
+<<PREINST>>
+0
+<</PREINST>>
+<<POSTINST>>
+1
+#!/bin/sh
+set -e
+if [ "$1" = "configure" ] && [ -x "`which update-mime-database 2>/dev/null`" ]
+then
+update-mime-database /usr/share/mime
+fi
+<</POSTINST>>
+<<PRERM>>
+1
+#!/bin/sh
+set -e
+if [ -x "`which update-mime-database 2>/dev/null`" ]
+then
+update-mime-database /usr/share/mime
+fi
+<</PRERM>>
+<<POSTRM>>
+0
+<</POSTRM>>
+<</SCRIPTS>>
+<<CHANGELOG>>
+<<DEST>>DEFAULT<</DEST>>
+alti2reader (1.2.0.0) ; urgency=low
+
+  * Alti-2 Reader binary archive mime-type registration was added.
+
+ -- Alexey Lobanov <aklobanov@gmail.com>  Sun, 13 Nov 2011 16:56:54 -0800
+
+alti2reader (1.2.0.0); urgency=low
+
+  * Altimaster N3 and Altimaster N3 Audio detection was added.
+
+ -- Alexey Lobanov <aklobanov@gmail.com>  Sun, 13 Nov 2011 10:52:08 -0800
+
+
+
+
+
+<</CHANGELOG>>
+<<COPYRIGHT>>
+This package was downloaded from http://sites.google.com/site/lobanovsoftware
+
+Upstream Author: Alexey Lobanov <aklobanov@gmail.com>
+
+Copyright:
+
+Copyright (C) 2011 Alexey Lobanov
+
+This source code is copyright under the GNU Public License (GPL), a copy
+of which may be found at /usr/share/common-licenses/GPL
+<</COPYRIGHT>>
+<<MENU>>
+1
+Name=Alti-2 Reader
+Version=1.0
+Exec=alti2reader %U
+Comment=Program to read save and print Altimaster N-series devices jump's information.
+Icon=/usr/share/alti2reader/Alti2Reader.ico
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=alti2reader;Application;GTK;GNOME;Utility;
+GenericName=Alti2Reader
+MimeType=application/x-alti2reader
+OnlyShowIn=GNOME
+TryExec=alti2reader
+
+<</MENU>>
+<<BUILD>>
+0
+1
+1
+<</BUILD>>

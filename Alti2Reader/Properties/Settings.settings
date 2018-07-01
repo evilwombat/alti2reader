@@ -9,7 +9,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="COMPortName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM1</Value>
+      <Value Profile="(Default)">/dev/ttyUSB0</Value>
     </Setting>
     <Setting Name="BaudRate" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">57600</Value>
@@ -26,7 +26,7 @@
     <Setting Name="Log" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="ShowDataExchange" Type="System.Boolean" Scope="User">
+    <Setting Name="ShowDataExch" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="ShowHex" Type="System.Boolean" Scope="User">

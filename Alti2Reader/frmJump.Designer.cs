@@ -74,11 +74,11 @@
             this.mnuMain.SuspendLayout();
             this.stsMain.SuspendLayout();
             this.tlsMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spt1)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.spt1)).BeginInit();
             this.spt1.Panel1.SuspendLayout();
             this.spt1.Panel2.SuspendLayout();
             this.spt1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spt2)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.spt2)).BeginInit();
             this.spt2.Panel1.SuspendLayout();
             this.spt2.Panel2.SuspendLayout();
             this.spt2.SuspendLayout();
@@ -105,6 +105,8 @@
             // mnuFile
             // 
             this.mnuFile.AutoToolTip = true;
+//            this.mnuFile.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuFile.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSave,
             this.toolStripSeparator1,
@@ -120,6 +122,8 @@
             // 
             // mnuSave
             // 
+//            this.mnuSave.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuSave.AutoToolTip = true;
             this.mnuSave.Name = "mnuSave";
             this.mnuSave.Size = new System.Drawing.Size(264, 26);
@@ -136,6 +140,8 @@
             // 
             // mnuPrint
             // 
+//            this.mnuPrint.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuPrint.AutoToolTip = true;
             this.mnuPrint.Name = "mnuPrint";
             this.mnuPrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
@@ -147,6 +153,8 @@
             // 
             // mnuPrintPreview
             // 
+//            this.mnuPrintPreview.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuPrintPreview.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuPrintPreview.AutoToolTip = true;
             this.mnuPrintPreview.Name = "mnuPrintPreview";
             this.mnuPrintPreview.Size = new System.Drawing.Size(264, 26);
@@ -157,6 +165,8 @@
             // 
             // mnuPageSetup
             // 
+//            this.mnuPageSetup.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuPageSetup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuPageSetup.AutoToolTip = true;
             this.mnuPageSetup.Name = "mnuPageSetup";
             this.mnuPageSetup.Size = new System.Drawing.Size(264, 26);
@@ -171,6 +181,8 @@
             // 
             // mnuExit
             // 
+//            this.mnuExit.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuExit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mnuExit.AutoToolTip = true;
             this.mnuExit.Name = "mnuExit";
             this.mnuExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
@@ -378,7 +390,7 @@
             this.craProfile.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated90;
             this.craProfile.AxisY.Title = "Altitude";
             this.craProfile.AxisY.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-//            this.craProfile.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.craProfile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.craProfile.Name = "craProfile";
             this.crtProfile.ChartAreas.Add(craProfile);
             this.crtProfile.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -468,11 +480,11 @@
             this.stsMain.PerformLayout();
             this.spt1.Panel1.ResumeLayout(false);
             this.spt1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spt1)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.spt1)).EndInit();
             this.spt1.ResumeLayout(false);
             this.spt2.Panel1.ResumeLayout(false);
             this.spt2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spt2)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.spt2)).EndInit();
             this.spt2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.crtProfile)).EndInit();
             this.ResumeLayout(false);

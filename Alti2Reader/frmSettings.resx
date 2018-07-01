@@ -1870,7 +1870,7 @@
     <value>38400</value>
   </data>
   <data name="clmDesc.Width" type="System.Int32, mscorlib">
-    <value>163</value>
+    <value>113</value>
   </data>
   <data name="&gt;&gt;nudTimeout.Parent" xml:space="preserve">
     <value>tbpConn</value>
@@ -3445,7 +3445,7 @@
     <value>grbShowDataExchange</value>
   </data>
   <data name="clmName.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>170</value>
   </data>
   <data name="chbResolveNames.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

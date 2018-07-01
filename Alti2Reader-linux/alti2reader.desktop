@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.2.0.0
+Encoding=UTF-8
+Type=Application
+Name=Alti-2 Reader
+Exec=alti2reader %U
+Terminal=false
+GenericName=Alti-2 Reader
+Comment=Read save and print Altimaster N-series device logbook
+MimeType=alti2;
+Categories=Utility;
+OnlyShowIn=GNOME;
+Icon=Alti2Reader.ico

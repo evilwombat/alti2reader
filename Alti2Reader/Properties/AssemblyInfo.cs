@@ -7,7 +7,7 @@ using System.Resources;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("Alti-2 Reader")]
-[assembly: AssemblyDescription("This software is intended to read data from Altimaster Neptune 2, N3 and N3A devices, save it in binary format, print and save logbook in text format.")]
+[assembly: AssemblyDescription("This software is intended to read data from Altimaster Neptune 2, N3 and N3A devices, save it in binary format, print and save logbook in text format, build save and print jump's profiles and statistics graphs.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Lobanov'Software")]
 [assembly: AssemblyProduct("Alti-2 Reader")]

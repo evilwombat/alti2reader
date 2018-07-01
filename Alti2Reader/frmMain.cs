@@ -27,8 +27,8 @@ namespace Alti2Reader
         private clsNeptune Neptune;
         public frmMain()
         {
-            Properties.Settings.Default.Reload();
-            ShowDataExchange = Properties.Settings.Default.ShowDataExchange;
+//            Properties.Settings.Default.Reload();
+            ShowDataExchange = Properties.Settings.Default.ShowDataExch;
             menu = eMenu.JumpsDetails;
             Send = 0;
             Recieved = 0;
@@ -864,11 +864,11 @@ namespace Alti2Reader
             mnuReadArchive.Enabled = true;
             mnuShow.Enabled = false;
             mnuTools.Enabled = false;
+			tsbTools.Enabled = false;
             tsbConnect.Enabled = true;
             tsbDisconnect.Enabled = false;
             tsbReadSelected.Enabled = false;
             tsbReadArchive.Enabled = true;
-            tsbTools.Enabled = false;
             bool b = false;
             foreach (clsNeptune.clsData dd in Neptune.Data) b = b || dd.isLoaded;
             mnuSaveAll.Enabled = b;
@@ -1116,20 +1116,20 @@ namespace Alti2Reader
             switch (menu)
             {
                 case eMenu.Statistics:
-                    dlg.DefaultExt = ".emf";
-                    dlg.Filter = "Enhanced metafiles (*.emf)|*.emf|All files (*.*)|*.*";
-                    dlg.FileName = Application.ProductName + " " + Neptune.DevInfo.ProductName + " " + Neptune.DevInfo.SN + ".statistics.emf";
+                    dlg.DefaultExt = ".jpg";
+                    dlg.Filter = "Graphics file (*.jpg)|*.jpg|All files (*.*)|*.*";
+                    dlg.FileName = Application.ProductName + " " + Neptune.DevInfo.ProductName + " " + Neptune.DevInfo.SN + ".statistics.jpg";
                     dlg.Title = "Choose file to store " + Application.ProductName + " statistics graph";
                     if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                        crtStat.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Emf);
+                        crtStat.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Jpeg);
                     break;
                 case eMenu.JumpsGraph:
-                    dlg.DefaultExt = ".emf";
-                    dlg.Filter = "Enhanced metafiles (*.emf)|*.emf|All files (*.*)|*.*";
-                    dlg.FileName = Application.ProductName + " " + Neptune.DevInfo.ProductName + " " + Neptune.DevInfo.SN + ".profiles.emf";
+                    dlg.DefaultExt = ".jpg";
+                    dlg.Filter = "Graphics file (*.jpg)|*.jpg|All files (*.*)|*.*";
+                    dlg.FileName = Application.ProductName + " " + Neptune.DevInfo.ProductName + " " + Neptune.DevInfo.SN + ".profiles.jpg";
                     dlg.Title = "Choose file to store " + Application.ProductName + " profiles graph";
                     if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                        crtProfile.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Emf);
+                        crtProfile.SaveImage(dlg.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Jpeg);
                     break;
                 case eMenu.JumpsDetails:
                     dlg.DefaultExt = ".csv";
@@ -1173,7 +1173,7 @@ namespace Alti2Reader
         private void mnuShow_Click(object sender, EventArgs e)
         {
             mnuShow.Checked = !mnuShow.Checked;
-            ShowDataExchange = mnuShow.Checked || Properties.Settings.Default.ShowDataExchange;
+            ShowDataExchange = mnuShow.Checked || Properties.Settings.Default.ShowDataExch;
             if (ShowDataExchange)
             {
                 if (menu == eMenu.Tools)
@@ -1250,7 +1250,7 @@ namespace Alti2Reader
                 dlg.rdbLogAll.Enabled = false;
                 dlg.rdbLogAllSeparated.Enabled = false;
             }
-            dlg.chbShowDataExchange.Checked = Properties.Settings.Default.ShowDataExchange;
+            dlg.chbShowDataExchange.Checked = Properties.Settings.Default.ShowDataExch;
             if (dlg.chbShowDataExchange.Checked)
             {
                 dlg.rdbShowHex.Checked = Properties.Settings.Default.ShowHex;
@@ -1350,8 +1350,8 @@ namespace Alti2Reader
                 Properties.Settings.Default.Timeout = (int) dlg.nudTimeout.Value;
                 Properties.Settings.Default.Retries = (int) dlg.nudRetries.Value;
                 Properties.Settings.Default.Log = !dlg.chbLog.Checked ? 0 : dlg.rdbLogOnlyErrors.Checked ? 1 : dlg.rdbLogAll.Checked ? 2 : 3;
-                Properties.Settings.Default.ShowDataExchange = dlg.chbShowDataExchange.Checked;
-                ShowDataExchange = mnuShow.Checked || Properties.Settings.Default.ShowDataExchange;
+                Properties.Settings.Default.ShowDataExch = dlg.chbShowDataExchange.Checked;
+                ShowDataExchange = mnuShow.Checked || Properties.Settings.Default.ShowDataExch;
                 Properties.Settings.Default.ShowHex = dlg.rdbShowHex.Checked;
                 Properties.Settings.Default.ToolsHex = dlg.rdbToolsHex.Checked;
                 Properties.Settings.Default.Sounds = dlg.rdbSoundsOn.Checked;
@@ -1925,7 +1925,7 @@ namespace Alti2Reader
             dlg.Neptune = Neptune;
             dlg.Text = "Jump's " + ((ListView)sender).SelectedItems[0].Text + " profile";
             dlg.lsvJump.Items.Clear();
-            int n = ((ListView)sender).SelectedItems[0].Index;
+//            int n = ((ListView)sender).SelectedItems[0].Index;
             dlg.sslJump.Text = "Jump's " + ((ListView)sender).SelectedItems[0].Text + " profile";
             dlg.lsvJump.Items.Clear();
             dlg.lsvJump.Items.AddRange(((clsNeptune.clsJumps.clsOneJump)(((ListView)sender).SelectedItems[0]).Tag).ToProfileScreen().ToArray());
