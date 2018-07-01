@@ -1364,8 +1364,14 @@ namespace Alti2Reader
                 public void ToStrings()
                 {
                     Parent.Headers.Header[clsHeaders.HEADERS_JUMP].Value = JumpNumber.ToString();
-                    Parent.Headers.Header[clsHeaders.HEADERS_DATE].Value = new DateTime(Year, Month, Day).ToShortDateString();
-                    Parent.Headers.Header[clsHeaders.HEADERS_TIME].Value = new DateTime(Year, Month, Day, Hour, Minutes, 0).ToShortTimeString();
+
+                    try {
+                        Parent.Headers.Header[clsHeaders.HEADERS_DATE].Value = new DateTime(Year, Month, Day).ToShortDateString();
+                        Parent.Headers.Header[clsHeaders.HEADERS_TIME].Value = new DateTime(Year, Month, Day, Hour, Minutes, 0).ToShortTimeString();
+                    } catch (Exception err) {
+                        Parent.Headers.Header[clsHeaders.HEADERS_DATE].Value = Month.ToString() + "/" + Day.ToString() + "/" + Year.ToString() + " ?? ";
+                        Parent.Headers.Header[clsHeaders.HEADERS_TIME].Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Hour, Minutes, 0).ToShortTimeString();
+                    }
                     Parent.Headers.Header[clsHeaders.HEADERS_EXIT].Value = ((double)AltExit * (double)((Properties.Settings.Default.Altitude == 0 ? 
                         ((clsDevSettings)(Parent.DependOn[1])).Altitude : (Properties.Settings.Default.Altitude == 1)) ? 16.0 : 52.4934)).ToString("0.");
                     Parent.Headers.Header[clsHeaders.HEADERS_DEPLOY].Value = ((double)AltDeploy * (double)((Properties.Settings.Default.Altitude == 0 ?
