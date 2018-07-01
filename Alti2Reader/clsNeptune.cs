@@ -879,12 +879,21 @@ namespace Alti2Reader
             public byte NVRAMConfig;
             private uint[] KeyGen(byte[] bytes)
             {
-                uint[] k = new uint[] {
-                                        (BytesToUInt(new byte[] {78,bytes[8],bytes[26],bytes[24]})),
-                                        (BytesToUInt(new byte[] {bytes[6],bytes[25],bytes[23],bytes[13]})),
-                                        (BytesToUInt(new byte[] {bytes[10],117,bytes[7],bytes[22]})),
-                                        (BytesToUInt(new byte[] {bytes[9],bytes[11],126,bytes[21]}))};
-                return k;
+				/*
+				 * The Y2K update introduced a new keygen scheme. Cursory analysis indicates we can determine
+				 * which key generation protocol to use based on the communications type, though this needs
+				 * to be tested further.
+				 */
+				if (CommType == 5)		/* Please don't lock us out of hardware that we bought and paid for, kthx */
+					return new uint[] {(BytesToUInt(new byte[] {0xAA,bytes[23],bytes[6],bytes[13]})),
+									   (BytesToUInt(new byte[] {bytes[24],bytes[22],bytes[12],105})),
+						               (BytesToUInt(new byte[] {bytes[7],bytes[8],bytes[10],68})),
+									   (BytesToUInt(new byte[] {bytes[9],bytes[11],bytes[26],bytes[25]}))};
+				else
+					return new uint[] {(BytesToUInt(new byte[] {78,bytes[8],bytes[26],bytes[24]})),
+                                       (BytesToUInt(new byte[] {bytes[6],bytes[25],bytes[23],bytes[13]})),
+                                       (BytesToUInt(new byte[] {bytes[10],117,bytes[7],bytes[22]})),
+                                       (BytesToUInt(new byte[] {bytes[9],bytes[11],126,bytes[21]}))};
             }
             private static bool IsCheckSumCorrect(byte[] bytes)
             {
