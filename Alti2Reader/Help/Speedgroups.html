@@ -1,0 +1,325 @@
+﻿<html>
+	
+<head>
+	<title>Speed groups</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+</head>
+
+<body>
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Speed groups</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Altimastercommunicationprotocol.html">Altimaster communication protocol</a> &rsaquo;&rsaquo; <a href="Datastructures.html">Data structures</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Datastructures.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Aircraftsnames.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Alarmssettings.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps6"><span class="rvts17">Three speed groups each of four bands. Each group occupies 8-byte record. Each record consists of four pair of bytes, one for each band. Fist byte of pair contains start value, second contains stop value.</span></p>
+<div class="rvps8"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BYTE</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BITS</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">VALUE</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">DESCRIPTON</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">?</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0 – default</span></p>
+<p class="rvps6"><span class="rvts17">1 – group 1</span></p>
+<p class="rvps6"><span class="rvts17">2 – group 2</span></p>
+<p class="rvps6"><span class="rvts17">3 – group 3 </span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Selected group</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 1 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">3</span></p>
+</td>
+<td width="71" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 1 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">4</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 2 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">5</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 2 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">6</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 3 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">7</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 3 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">8</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 4 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">9</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 4 group 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">10</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 1 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">11</span></p>
+</td>
+<td width="71" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 1 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">12</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 2 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">13</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 2 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">14</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 3 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">15</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 3 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">16</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 4 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">17</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 4 group 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">18</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 1 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">19</span></p>
+</td>
+<td width="71" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 1 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">20</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 2 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">21</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 2 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">22</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 3 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">23</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 3 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">24</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Start value band 4 group 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">25</span></p>
+</td>
+<td width="71" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Stop value band 4 group 3</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easily create Web Help sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011 by Alexey Lobanov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

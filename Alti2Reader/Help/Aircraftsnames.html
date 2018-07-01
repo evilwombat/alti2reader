@@ -1,0 +1,242 @@
+﻿<html>
+	
+<head>
+	<title>Aircrafts names</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+</head>
+
+<body>
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Aircrafts names</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Altimastercommunicationprotocol.html">Altimaster communication protocol</a> &rsaquo;&rsaquo; <a href="Datastructures.html">Data structures</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Datastructures.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Dropzonesnames.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Speedgroups.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps6"><span class="rvts17">For name used 10 bytes, so each block contains two names. Names are stored as ASCII values using bits 0-6 of each byte. High bit (number 7) of the name’s first byte (number 0) is a flag which is indicating that the name is hidden. High bit (number 7) of the name’s second byte (number 1) is a flag which is indicating that the name is used.</span></p>
+<div class="rvps8"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BYTE</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BITS</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">VALUE</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">DESCRIPTON</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0</span></p>
+</td>
+<td width="43" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="109" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Checksum</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Count</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2-21</span></p>
+</td>
+<td width="43" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 0: Aircraft name in ASCII </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">22-41</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 1: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">42-61</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 2: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">62-81</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 3: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">82-101</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 4: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">102-121</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 5: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">122-141</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 6: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">142-161</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 7: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">162-181</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 8: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">182-201</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 9: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">202-221</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 10: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">222-241</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 11: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">242-261</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 12: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">262-281</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 13: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">282-301</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 14: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">302-321</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-159</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">ASCII or 0x00</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Block 15: Aircraft name in ASCII</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easily create Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011 by Alexey Lobanov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

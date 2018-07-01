@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02249243-EC6F-4BC7-9B49-DE9132F5E5FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alti2Reader</RootNamespace>
+    <AssemblyName>Alti-2 Reader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Alti-2 Reader</ProductName>
+    <PublisherName>Lobanov%27Software</PublisherName>
+    <SuiteName>Alti-2 Reader</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Alti2Reader.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Alti-2 Reader.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>680EBF4375E1615D4FEB3F90B2DE3079F0969F6B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Alti2Reader_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FTChipIDNet">
+      <HintPath>.\FTChipIDNet.dll</HintPath>
+    </Reference>
+    <Reference Include="InTheHand.Net.Personal">
+      <HintPath>.\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="IrDAComms">
+      <HintPath>.\IrDAComms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="USB, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>USB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCal.Designer.cs">
+      <DependentUpon>frmCal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJump.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJump.Designer.cs">
+      <DependentUpon>frmJump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsNeptune.cs">
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCal.resx">
+      <DependentUpon>frmCal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJump.resx">
+      <DependentUpon>frmJump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Alti-2 Reader.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NeptuneGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NeptuneYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NeptuneRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\N3ALogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\N3Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\NeptuneLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\DZnames.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FTChipID.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\Year.png" />
+    <None Include="Images\AC.png" />
+    <Content Include="Images\ACnames.png" />
+    <Content Include="Images\airplane.png" />
+    <Content Include="Images\alarm.png" />
+    <None Include="Images\AllJumps.png" />
+    <Content Include="Images\ALnames.png" />
+    <None Include="Images\Alti-2 Reader.ico" />
+    <None Include="Images\AltDeploy.png" />
+    <Content Include="Images\altimeter.png" />
+    <Content Include="Images\altimeter2.png" />
+    <None Include="Images\Exchange.png" />
+    <None Include="Images\deleted2.png" />
+    <None Include="Images\me.png" />
+    <None Include="Images\help.png" />
+    <None Include="Images\NeptuneRead.png" />
+    <None Include="Images\print.png" />
+    <None Include="Images\printpreview.png" />
+    <None Include="Images\read.png" />
+    <None Include="Images\save.png" />
+    <None Include="Images\saveASCII.png" />
+    <None Include="Images\selectall.png" />
+    <None Include="Images\settings.png" />
+    <None Include="Images\tools2.png" />
+    <None Include="Images\Altimeter3.png" />
+    <None Include="Images\bars.png" />
+    <None Include="Images\bars_stacket.png" />
+    <Content Include="Images\canopy.png" />
+    <Content Include="Images\canopydisabled.png" />
+    <Content Include="Images\canopyenabled.png" />
+    <None Include="Images\chart.png" />
+    <None Include="Images\chart2.png" />
+    <None Include="Images\chart2D.png" />
+    <None Include="Images\chart3D.png" />
+    <Content Include="Images\climb.png" />
+    <Content Include="Images\comport.png" />
+    <Content Include="Images\contrast.png" />
+    <Content Include="Images\current.png" />
+    <Content Include="Images\dateformat.png" />
+    <None Include="Images\Dates.png" />
+    <Content Include="Images\deleted.png" />
+    <Content Include="Images\display.png" />
+    <Content Include="Images\dz.png" />
+    <None Include="Images\dz2.png" />
+    <None Include="Images\filetype.ico" />
+    <Content Include="Images\flipped.png" />
+    <Content Include="Images\freefall.png" />
+    <None Include="Images\graph.png" />
+    <Content Include="Images\hidden.png" />
+    <Content Include="Images\jump.png" />
+    <None Include="Images\jump2.png" />
+    <None Include="Images\jump3.png" />
+    <None Include="Images\jump4.png" />
+    <Content Include="Images\logbook.png" />
+    <Content Include="Images\logbookdisabled.png" />
+    <Content Include="Images\logbookenabled.png" />
+    <None Include="Images\LogbookSummary.png" />
+    <None Include="Images\RAM.png" />
+    <None Include="Images\N3Adetected.png" />
+    <None Include="Images\N3detected.png" />
+    <None Include="Images\NeptuneDetected.png" />
+    <Content Include="Images\N3.png" />
+    <Content Include="Images\Neptune.png" />
+    <None Include="Images\pie.png" />
+    <None Include="Images\savegraph.png" />
+    <None Include="Images\printpreviewgraph.png" />
+    <None Include="Images\printpreviewtools.png" />
+    <None Include="Images\savetools.png" />
+    <Content Include="Images\selected.png" />
+    <Content Include="Images\speed.png" />
+    <Content Include="Images\speed2.png" />
+    <None Include="Images\speed3.png" />
+    <Content Include="Images\student.png" />
+    <Content Include="Images\temperature.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\timeformat.png" />
+    <Content Include="Images\tone.png" />
+    <None Include="Images\tone2.png" />
+    <None Include="Images\tools.png" />
+    <Content Include="Images\unflipped.png" />
+    <None Include="Images\displaysettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Help\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

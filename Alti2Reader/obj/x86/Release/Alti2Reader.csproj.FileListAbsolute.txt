@@ -1,0 +1,46 @@
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\FTChipIDNet.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\USB.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\FTChipID.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmAbout.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmMain.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmSettings.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.Properties.Resources.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.chm
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe.config
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe.manifest
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.application
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.TrustInfo.xml
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe.manifest
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.application
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe
+C:\Users\aklobanov\documents\visual studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\IrDAComms.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\bin\Release\InTheHand.Net.Personal.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmJump.resources
+C:\Users\aklobanov\documents\visual studio 2010\Projects\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmCal.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\Alti-2 Reader.exe.config
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\FTChipID.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\Alti-2 Reader.chm
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\Alti-2 Reader.exe.manifest
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\Alti-2 Reader.application
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\Alti-2 Reader.exe
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\FTChipIDNet.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\InTheHand.Net.Personal.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\IrDAComms.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\bin\Release\USB.dll
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.frmAbout.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.frmCal.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.frmJump.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.frmMain.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.frmSettings.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti2Reader.Properties.Resources.resources
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.TrustInfo.xml
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe.manifest
+C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.application

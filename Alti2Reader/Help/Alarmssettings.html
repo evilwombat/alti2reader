@@ -1,0 +1,274 @@
+﻿<html>
+	
+<head>
+	<title>Alarms settings</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+</head>
+
+<body>
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Alarms settings</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Altimastercommunicationprotocol.html">Altimaster communication protocol</a> &rsaquo;&rsaquo; <a href="Datastructures.html">Data structures</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Datastructures.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Speedgroups.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Alarmsnames.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps6"><span class="rvts17">Consist of eight 10-byte arrays presiding by four bytes. First two bytes are unknown for me. Second two bytes contain array index of active free fall and canopy alarms respectively. If the high bit (7) of these bytes is set means than free fall (or canopy) alarms are disabled. </span></p>
+<div class="rvps8"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BYTE</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BITS</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">VALUE</span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">DESCRIPTON</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">?</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">?</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">If BIT 7 is set all free fall alarms are disabled</span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Active alarm array number for free fall. </span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">3</span></p>
+</td>
+<td width="43" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">If BIT 7 is set all canopy alarms are disabled</span></p>
+</td>
+<td width="380" height="23" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Active alarm array number for canopy.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td rowspan="8" width="31" height="20" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps6"><span class="rvts17">4-13</span></p>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps6"><span class="rvts17">10</span></p>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps6"><span class="rvts17">B</span></p>
+<p class="rvps6"><span class="rvts17">Y</span></p>
+<p class="rvps6"><span class="rvts17">T</span></p>
+<p class="rvps6"><span class="rvts17">E</span></p>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps6"><span class="rvts17">A</span></p>
+<p class="rvps6"><span class="rvts17">R</span></p>
+<p class="rvps6"><span class="rvts17">R</span></p>
+<p class="rvps6"><span class="rvts17">A</span></p>
+<p class="rvps6"><span class="rvts17">Y</span></p>
+</td>
+<td rowspan="2" width="33" height="20" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0</span></p>
+</td>
+<td width="43" height="20" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2-7</span></p>
+</td>
+<td width="80" height="20" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" height="20" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm name index</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="43" height="36" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-1</span></p>
+</td>
+<td width="80" height="36" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0 = free fall</span></p>
+<p class="rvps6"><span class="rvts17">1 = canopy</span></p>
+</td>
+<td width="380" height="36" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Free fall/canopy indicator</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" height="17" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1</span></p>
+</td>
+<td width="43" height="17" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" height="17" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" height="17" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm tone index for Alarm 1</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm tone index for Alarm 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">3</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-7</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm tone index for Alarm 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">4-5</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm altitude 1. </span></p>
+<p class="rvps6"><span class="rvts17">Resulted altitude calculated </span></p>
+<p class="rvps6"><span class="rvts17">in meters</span></p>
+<p class="rvps6"><span class="rvts17">for free fall: (round (100 * (value/2)))/100</span></p>
+<p class="rvps6"><span class="rvts17">for canopy: (round (10 * (value/2)))/10</span></p>
+<p class="rvps6"><span class="rvts17">in feet</span></p>
+<p class="rvps6"><span class="rvts17">for free fall: round(((((value&nbsp;/&nbsp;2)&nbsp;*&nbsp;1000)&nbsp;/&nbsp;25.4)&nbsp;/&nbsp;12)&nbsp;/&nbsp;100)*100</span></p>
+<p class="rvps6"><span class="rvts17">for canopy: round(((((value&nbsp;/&nbsp;2)&nbsp;*&nbsp;1000)&nbsp;/&nbsp;25.4)&nbsp;/&nbsp;12)&nbsp;/&nbsp;10)*10</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">6-7</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm altitude 2</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="33" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">8-9</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm altitude 3</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">14-23</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 2: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">24-33</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 3: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">34-43</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 4: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">44-53</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 5: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">54-63</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 6: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">64-73</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 7: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="78" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">74-83</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="380" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Alarm 8: &nbsp;10 – BYTE ARRAY the same as above</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easily create HTML Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011 by Alexey Lobanov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

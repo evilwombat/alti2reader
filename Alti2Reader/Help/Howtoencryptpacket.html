@@ -1,0 +1,59 @@
+﻿<html>
+	
+<head>
+	<title>How to encrypt packet</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+</head>
+
+<body>
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>How to encrypt packet</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Altimastercommunicationprotocol.html">Altimaster communication protocol</a> &rsaquo;&rsaquo; <a href="Encryptionalgorithm.html">Encryption algorithm</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Encryptionalgorithm.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Howtogenerateencryptionkey.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Howtodecryptpacket.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps6"><span class="rvts17">If packet length is less than 32 bytes expand it to this size by adding zeros. If packet length is more than 32 bytes divide it to 32-bytes packets and if the length is not even to 32 expand last packet to 32 bytes by adding zeros. Convert each 32-packet to DWORD array. Remember that bytes are stored in Little-Endian format. Take pair of DWORD and encrypt it with code placed bellow. Than next pair, etc. Convert DWORD array to 32-byte packet where bytes are stored in Little-Endian format. Packet is encrypted.</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">UInt32</span><span class="rvts21">&nbsp;U;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">// first DWORD from the pair</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">UInt32</span><span class="rvts21">&nbsp;U1;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">// second DWORD from the pair</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">UInt32</span><span class="rvts21">&nbsp;U2&nbsp;=&nbsp;0;</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="rvts22">for</span><span class="rvts21"> (</span><span class="rvts22">int</span><span class="rvts21">&nbsp;i&nbsp;=&nbsp;16;&nbsp;i&nbsp;&gt;&nbsp;0;&nbsp;i--)</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;+=&nbsp;(((U1&nbsp;&lt;&lt;&nbsp;4)&nbsp;^&nbsp;(U1&nbsp;&gt;&gt;&nbsp;5))&nbsp;+&nbsp;U1)&nbsp;^&nbsp;(U2&nbsp;+&nbsp;KEY[U2&nbsp;&amp;&nbsp;3]);</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2&nbsp;+=&nbsp;0x9E3779B9;</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1&nbsp;+=&nbsp;(((U&nbsp;&lt;&lt;&nbsp;4)&nbsp;^&nbsp;(U&nbsp;&gt;&gt;&nbsp;5))&nbsp;+&nbsp;U)&nbsp;^&nbsp;(U2&nbsp;+&nbsp;KEY[(U2&nbsp;&gt;&gt;&nbsp;11)&nbsp;&amp;&nbsp;3]);</span></p>
+<p class="rvps11"><span class="rvts21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="rvps11"><span class="rvts17"><br></span></p>
+<p class="rvps6"><span class="rvts17">Encrypted pair is in U and U1 DWORDs, KEY is array of four DWORDs with </span><a class="rvts19" href="Howtogenerateencryptionkey.html">encryption key</a><span class="rvts17"> generated in order I’ve explained above. </span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011 by Alexey Lobanov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

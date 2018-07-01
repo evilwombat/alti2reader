@@ -1,0 +1,217 @@
+﻿<html>
+	
+<head>
+	<title>Jumps summary</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+</head>
+
+<body>
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Jumps summary</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Altimastercommunicationprotocol.html">Altimaster communication protocol</a> &rsaquo;&rsaquo; <a href="Datastructures.html">Data structures</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Datastructures.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Alarmtonedata.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Jumpsdetails.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps6"><span class="rvts17">All WORDs and DWORDs are stored in Little Endian format: low byte first, high byte second, etc.</span></p>
+<div class="rvps8"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BYTE</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">BITS</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">VALUE</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps7"><span class="rvts18">DESCRIPTON</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-1</span></p>
+</td>
+<td width="43" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0x04DC in my N3</span></p>
+</td>
+<td width="381" height="16" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">?</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2-3</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Number of jumps since last odometer reset</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">4-5</span></p>
+</td>
+<td width="43" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" height="18" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Total physical jumps stored (include deleted jumps)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">6-7</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Total jumps (total physical jumps exclude deleted)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">8-11</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-31</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Total free fall time in seconds</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">12-15</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-31</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Total time under canopy in seconds</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">16-17</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Next jump number</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">18-19</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Top jump number (the most resent jump number)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">20-23</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-31</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0x00610161 in my N3, 0x0161 is total physical jumps in my N3</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">?</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">24-25</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Current drop zone name index</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">26-27</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"><br></span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Current aircraft name index</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="50" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">28-29</span></p>
+</td>
+<td width="43" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0-15</span></p>
+</td>
+<td width="109" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">0 = off</span></p>
+<p class="rvps6"><span class="rvts17">1 = on</span></p>
+</td>
+<td width="381" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Student mode</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps6"><span class="rvts17"><br></span></p>
+<p class="rvps15"><span class="rvts17">Maximum of Total Physical Jumps depending on HW revision number</span></p>
+<div class="rvps8"><table border="1" cellpadding="4" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="88" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts18">HW revision</span></p>
+</td>
+<td width="156" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts18">Max Total Physical Jumps</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="88" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1</span></p>
+</td>
+<td width="156" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2900</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="88" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">6</span></p>
+</td>
+<td width="156" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">1600</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="88" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">7</span></p>
+</td>
+<td width="156" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">2900</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="88" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17">Other</span></p>
+</td>
+<td width="156" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid;"><p class="rvps6"><span class="rvts17"> &nbsp;149</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easily create PDF Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011 by Alexey Lobanov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
