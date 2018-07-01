@@ -1463,6 +1463,16 @@ namespace Alti2Reader
                     ushort[] u = new ushort[11];
                     ushort u1;
                     ulong l;
+                    ulong year_offset = 2007;
+
+                    /*
+                     * The Month/Year portion of the date seems to be represented in terms of the number of months
+                     * since Jan 2007. The Y2K update bumps this to Jan 2015.
+                     */
+                    clsDevInfo DevInfo = (clsDevInfo)Parent.DependOn[0];
+                    if (DevInfo.CommType == 5)
+                        year_offset = 2015;
+
                     for (int j = 0; j < 11; j++)
                     {
                         l = (ulong)(bytes[j * 2 + 1] << 8);
@@ -1471,7 +1481,7 @@ namespace Alti2Reader
                     }
                     JumpNumber = u[0];
                     u1 = (ushort)(((u[1] & 0x007F) - 1) / 12);
-                    Year = (ushort)(2007 + u1);
+                    Year = (ushort)(year_offset + u1);
                     Month = (ushort)((u[1] & 0x007F) - (12 * u1));
                     Deleted = (ushort)(u[1] & 0x0080);
                     FFALnameIndex = (ushort)((u[1] & 0xFF00) >> 8);
