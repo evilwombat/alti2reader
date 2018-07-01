@@ -107,5 +107,8 @@
     <Setting Name="Sounds" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="EarliestJump" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2007-01-01</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

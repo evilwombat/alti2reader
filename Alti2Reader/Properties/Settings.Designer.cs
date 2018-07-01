@@ -442,5 +442,17 @@ namespace Alti2Reader.Properties {
                 this["Sounds"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2007-01-01")]
+        public global::System.DateTime EarliestJump {
+            get {
+                return ((global::System.DateTime)(this["EarliestJump"]));
+            }
+            set {
+                this["EarliestJump"] = value;
+            }
+        }
     }
 }
