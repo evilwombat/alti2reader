@@ -44,3 +44,24 @@ C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2R
 C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.TrustInfo.xml
 C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe.manifest
 C:\Users\aklobanov\Documents\Visual Studio 2010\Projects\Alti2Reader.OLD2\Alti2Reader\obj\x86\Release\Alti-2 Reader.application
+C:\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe.config
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe
+C:\Alti2Reader\Alti2Reader\bin\Release\FTChipID.dll
+C:\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.chm
+C:\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe.manifest
+C:\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.application
+C:\Alti2Reader\Alti2Reader\bin\Release\Alti-2 Reader.exe
+C:\Alti2Reader\Alti2Reader\bin\Release\FTChipIDNet.dll
+C:\Alti2Reader\Alti2Reader\bin\Release\InTheHand.Net.Personal.dll
+C:\Alti2Reader\Alti2Reader\bin\Release\IrDAComms.dll
+C:\Alti2Reader\Alti2Reader\bin\Release\USB.dll
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmAbout.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmCal.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmJump.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmMain.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.frmSettings.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.Properties.Resources.resources
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti2Reader.csproj.GenerateResource.Cache
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.TrustInfo.xml
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.exe.manifest
+C:\Alti2Reader\Alti2Reader\obj\x86\Release\Alti-2 Reader.application
