@@ -1340,6 +1340,7 @@ namespace Alti2Reader
             dlg.chbFF.Checked = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_FFAL].Show;
             dlg.chbCP.Checked = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_CPAL].Show;
             dlg.chbDeleted.Checked = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_DELETED].Show;
+            dlg.dtpEarliestJump.Value = Properties.Settings.Default.EarliestJump;
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 Properties.Settings.Default.AutoConnect = dlg.chbAutoConnect.Checked;
@@ -1398,6 +1399,7 @@ namespace Alti2Reader
                 Properties.Settings.Default.FFname = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_FFAL].Show;
                 Properties.Settings.Default.CPname = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_CPAL].Show;
                 Properties.Settings.Default.Deleted = Neptune.Jumps.Headers.Header[clsNeptune.clsJumps.clsHeaders.HEADERS_DELETED].Show;
+                Properties.Settings.Default.EarliestJump = dlg.dtpEarliestJump.Value;
                 Properties.Settings.Default.Save();
                 clsPanel obj = (clsPanel)trvMain.SelectedNode.Tag;
                 if (obj != null) obj.ShowPanel();
