@@ -1470,6 +1470,15 @@ namespace Alti2Reader
                     ushort u1;
                     ulong l;
                     ulong year_offset = 2007;
+                    ushort month_delta;
+                    DateTime earliest_jump = Properties.Settings.Default.EarliestJump;
+
+                    for (int j = 0; j < 11; j++)
+                    {
+                        l = (ulong)(bytes[j * 2 + 1] << 8);
+                        l += (ulong)(bytes[j * 2]);
+                        u[j] = (ushort)(l & 0xFFFF);
+                    }
 
                     /*
                      * The Month/Year portion of the date seems to be represented in terms of the number of months
@@ -1479,16 +1488,27 @@ namespace Alti2Reader
                     if (DevInfo.CommType == 5)
                         year_offset = 2015;
 
-                    for (int j = 0; j < 11; j++)
-                    {
-                        l = (ulong)(bytes[j * 2 + 1] << 8);
-                        l += (ulong)(bytes[j * 2]);
-                        u[j] = (ushort)(l & 0xFFFF);
-                    }
-                    JumpNumber = u[0];
-                    u1 = (ushort)(((u[1] & 0x007F) - 1) / 12);
+                    month_delta = (ushort) (u[1] & 0x007F);
+                    u1 = (ushort)((month_delta - 1) / 12);
                     Year = (ushort)(year_offset + u1);
-                    Month = (ushort)((u[1] & 0x007F) - (12 * u1));
+                    Month = (ushort)(month_delta - (12 * u1));
+                    Day = (ushort)((u[6] & 0x7C00) >> 10);
+
+                    if (DevInfo.CommType != 5) { /* Firmware from before the Y2K fix */
+
+                        if (Year < earliest_jump.Year ||
+                            (Year == earliest_jump.Year &&
+                            (Month < earliest_jump.Month || (Month == earliest_jump.Month && Day < earliest_jump.Day)))) {
+
+                            month_delta += 128; /* Apply date rollover workaround and recompute date */
+                            u1 = (ushort)((month_delta - 1) / 12);
+                            Year = (ushort)(year_offset + u1);
+                            Month = (ushort)(month_delta - (12 * u1));
+                            Day = (ushort)((u[6] & 0x7C00) >> 10);
+                        }
+                    }
+
+                    JumpNumber = u[0];
                     Deleted = (ushort)(u[1] & 0x0080);
                     FFALnameIndex = (ushort)((u[1] & 0xFF00) >> 8);
                     FFTimeSec = (ushort)(u[2] & 0x03FF);
@@ -1499,7 +1519,6 @@ namespace Alti2Reader
                     ACnameIndex = (ushort)(((u[5] & 0xF000) >> 12) + ((u[3] & 0x8000) == 0 ? 0 : 16));
                     AltExit = (ushort)(u[6] & 0x3FF); // 2 hPa
                     AltDeploy = (ushort)(u[7] & 0x03FF); // 2 hPa
-                    Day = (ushort)((u[6] & 0x7C00) >> 10);
                     SpeedGroupNumber = (ushort)(((ushort)((u[6] & 0x8000) >> 15)) + ((ushort)(((u[7] & 0x8000) >> 15) * 2)));
                     DZnameIndex = (ushort)((u[7] & 0x3C00) >> 10);
                     CPTimeSec = (ushort)(u[8] & 0x0FFF);
