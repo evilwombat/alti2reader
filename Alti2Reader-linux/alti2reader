@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec mono "/usr/share/alti2reader/Alti2Reader.exe" "$@"

@@ -1,1 +1,0 @@
-application/alti2reader; /usr/bin/alti2reader %s; copiousoutput; description="Alti-2 Reader binary archive"; nametemplate=%s.alti2; priority=0

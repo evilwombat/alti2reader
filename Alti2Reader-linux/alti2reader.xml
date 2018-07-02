@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
-  <mime-type type="application/x-alti2reader">
-    <comment xml:lang="en">Alti-2 Reader binary archive</comment>
-    <glob pattern="*.alti2"/>
-  </mime-type>
-</mime-info>
