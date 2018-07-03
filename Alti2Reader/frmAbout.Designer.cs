@@ -64,25 +64,21 @@
             // labelProductName
             // 
             resources.ApplyResources(this.labelProductName, "labelProductName");
-            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 30);
             this.labelProductName.Name = "labelProductName";
             // 
             // labelVersion
             // 
             resources.ApplyResources(this.labelVersion, "labelVersion");
-            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 30);
             this.labelVersion.Name = "labelVersion";
             // 
             // labelCopyright
             // 
             resources.ApplyResources(this.labelCopyright, "labelCopyright");
-            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 30);
             this.labelCopyright.Name = "labelCopyright";
             // 
             // labelCompanyName
             // 
             resources.ApplyResources(this.labelCompanyName, "labelCompanyName");
-            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 30);
             this.labelCompanyName.Name = "labelCompanyName";
             // 
             // textBoxDescription
@@ -98,8 +94,6 @@
             this.btnOk.BackColor = System.Drawing.SystemColors.Control;
             this.btnOk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.MaximumSize = new System.Drawing.Size(95, 35);
-            this.btnOk.MinimumSize = new System.Drawing.Size(95, 35);
             this.btnOk.Name = "btnOk";
             this.btnOk.UseVisualStyleBackColor = false;
             // 
@@ -110,11 +104,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = global::Alti2Reader.Properties.Resources.Alti_2_Reader;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbout";
-            this.ShowIcon = true;
-            this.Icon = (System.Drawing.Icon)global::Alti2Reader.Properties.Resources.Alti_2_Reader;
             this.ShowInTaskbar = false;
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
